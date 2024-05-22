@@ -1,0 +1,102 @@
+.conteudo-introducao{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  gap: 140px;
+  
+}
+
+.introducao {
+  justify-items: center;
+  position: relative;
+  margin-top: 70px;
+}
+
+
+.introducao h1{
+  font-size: 5rem;
+  line-height: 1.125;
+}
+
+.introducao p{
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+.introducao h1::before{
+  content: "";
+  display: block;
+  width: 50%;
+  height: 25%;
+  background: url("/img/detalhe.svg") no-repeat center; 
+  position: absolute;
+  top: -3%;
+  left: -20%;
+  z-index: -1;
+}
+
+.cover img{
+  object-fit: cover;
+  height: 100%;
+}
+
+@media (max-width:1000px){
+  .conteudo-introducao{
+    grid-template-columns: 1fr;
+    
+  }
+  .cover img{
+     
+   margin: 0 auto;
+   /* Quando tiver o max-width definido, use a margin para poder centralizar a imagem */
+  }
+
+  .introducao{
+    margin-top: -60px;
+  }
+
+  .introducao h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .introducao h1::before{
+    content: "";
+    display: block;
+    width: 5%;
+    background: url(/img/detalhe.svg) no-repeat cover;
+    height: 40%;
+    left: 16%;
+    top: -8%;
+    position: absolute;
+  }
+
+  .introducao p{
+    text-align: center;
+  }
+  
+}
+
+@media (max-width: 500px){
+ .conteudo-introducao img{
+  display: none;
+ }
+ 
+.introducao {
+  margin-top: -90px;
+}
+
+ .conteudo-introducao{
+  grid-template-columns: 1fr;
+ }
+
+ .introducao h1::before{
+  content: "";
+  width: 40px;
+  height: 60px;  
+  left: 60px;
+  top: 1px;
+ }
+}
